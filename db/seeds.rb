@@ -5,3 +5,14 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+Event.destroy_all
+
+puts 'Creating 5 products...'
+9.times do |i|
+  event = Event.create!(
+    name: Faker::Company.name,
+    description: Faker::Company.catch_phrase,
+  )
+  puts "#{i + 1}. #{event.name}"
+end
+puts 'Finished!'
