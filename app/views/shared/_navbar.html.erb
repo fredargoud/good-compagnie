@@ -1,9 +1,10 @@
 <div class="navbar-wagon">
   <!-- Logo -->
-  <a href="/" class="navbar-wagon-brand">
+
     <!-- <img src="images/logo.png" alt="logo"> -->
+  <%= link_to events_path, class: 'navbar-wagon-brand' do %>
     <%= image_tag "good-compagnie2.png", alt: "logo" %>
-  </a>
+  <% end %>
 
   <!-- Right Navigation -->
   <div class="navbar-wagon-right hidden-xs hidden-sm">
@@ -30,9 +31,9 @@
     <div class="dropdown">
       <i class="fas fa-bars dropdown-toggle" data-toggle="dropdown" role="button"></i>
       <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
-        <li><a href="#">Host</a></li>
-        <li><a href="#">Trips</a></li>
-        <li><a href="#">Messagese</a></li>
+        <li><a href="#">Profile</a></li>
+        <li><a href="#">Mes Devis</a></li>
+        <li><a href="#">Déconnexion</a></li>
       </ul>
     </div>
   </div>
