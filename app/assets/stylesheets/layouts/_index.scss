@@ -3,3 +3,16 @@
 // @import "dashboard";
 // @import "profile";
 // @import "map";
+
+.main-container {
+  width: 100%;
+  margin: 0 auto;
+  background-color: rgb(220,220,220);
+}
+
+.container {
+  width: 100%;
+  min-height: calc(100vh - 70px - 50vh);
+  background-color: white;
+  padding-left: 0 !important;
+}

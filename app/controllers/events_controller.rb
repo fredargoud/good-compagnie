@@ -5,6 +5,15 @@ class EventsController < ApplicationController
     else
       @events = Event.all
     end
+
+    # @events = Event.where.not(latitude: nil, longitude: nil)
+
+    # @markers = @events.map do |event|
+    #   {
+    #     lng: event.longitude,
+    #     lat: event.latitude
+    #   }
+    # end
   end
 
   def show
