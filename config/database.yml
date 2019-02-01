@@ -83,3 +83,4 @@ production:
   database: good-compagnie_production
   username: good-compagnie
   password: <%= ENV['GOOD-COMPAGNIE_DATABASE_PASSWORD'] %>
+
