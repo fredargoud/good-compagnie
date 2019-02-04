@@ -1,19 +1,19 @@
-#sidebar li
-{
+#sidebar li {
   margin-top: 50px;
   margin-bottom: 50px;
   text-align: center;
 }
 
-#sidebar
-{
-  min-height: 1000px;
+#sidebar {
   background-color: #236167;
   color: #FFF;
   padding: 10px;
   height: 100%;
   width: 100%;
-  z-index: 2;
+  flex: 0 0 450px;
+  height: 100vh;
+  position: sticky !important; /* !important to override Gmaps inline CSS */
+  top: 0; /* !important to override Gmaps inline CSS */
 }
 
 .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2 {

@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users
-  root to: 'pages#home'
+  root to: 'events#index'
 
   resources :events, only: [:index, :show] do
     resources :quotations, only: [:new, :create]
