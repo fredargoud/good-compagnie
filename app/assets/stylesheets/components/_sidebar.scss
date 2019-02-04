@@ -13,7 +13,8 @@
   flex: 0 0 450px;
   height: 100vh;
   position: sticky !important; /* !important to override Gmaps inline CSS */
-  top: 0; /* !important to override Gmaps inline CSS */
+  top: 0;
+  margin-bottom: 0 !important;
 }
 
 .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2 {
