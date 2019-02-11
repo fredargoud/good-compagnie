@@ -24,13 +24,31 @@ const fitMapToMarkers = (map, marker) => {
   map.fitBounds(bounds, { padding: 70, maxZoom: 15 });
 };
 
+var markerHeight = 50, markerRadius = 10, linearOffset = 25;
+var popupOffsets = {
+ 'top': [0, 0],
+ 'top-left': [0,0],
+ 'top-right': [0,0],
+ 'bottom': [0, -markerHeight],
+ 'bottom-left': [linearOffset, (markerHeight - markerRadius + linearOffset) * -1],
+ 'bottom-right': [-linearOffset, (markerHeight - markerRadius + linearOffset) * -1],
+ 'left': [markerRadius, (markerHeight - markerRadius) * -1],
+ 'right': [-markerRadius, (markerHeight - markerRadius) * -1]
+ };
+
 const initMapbox = () => {
   if (mapElement) {
     const map = buildMap();
     const markers = JSON.parse(mapElement.dataset.markers);
     addMarkersToMap(map, markers);
     fitMapToMarkers(map, markers);
+    const markersPopup = document.querySelector('.mapboxgl-marker-anchor-center');
+    console.log(markersPopup);
+    markersPopup.on('click', (e) => {
+      new map.Popup({offset: popupOffsets});
+    });
   }
 };
+
 
 export { initMapbox };
