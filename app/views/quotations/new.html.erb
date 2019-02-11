@@ -1,9 +1,52 @@
-<h1>Demander un devis pour <%= @event.name %></h1>
+<div class="container">
+
+  <div class="col-xs-12 col-sm-4 col-sm-offset-4">
+    <h1>Devis pour <br><%= @event.name %></h1>
+    <div class="quotation-form">
+
+      <%= form_for [@event, @quotation] do |f| %>
+        <div class="row">
+          <div class="col-xs-6">
+            <div class="form-group">
+              <%= f.label "Prénom" %>
+              <%= f.text_field :first_name, class:"form-control" %>
+            </div>
+          </div>
+
+          <div class="col-xs-6">
+            <%= f.label "Nom" %>
+            <%= f.text_field :last_name, class:"form-control" %>
+          </div>
+        </div>
 
 
-<%= form_for [@event, @quotation] do |f| %>
-  <%= f.label :first_name %>
-  <%= f.text_field :first_name %>
+        <div class="form-group">
+          <%= f.label "Email" %>
+          <%= f.text_field :e_mail, class:"form-control" %>
+        </div>
 
-  <%= f.submit %>
-<% end %>
+        <div class="form-group">
+          <%= f.label "Société" %>
+          <%= f.text_field :company, class:"form-control" %>
+        </div>
+
+        <div class="form-group">
+          <%= f.label "Adresse" %>
+          <%= f.text_field :address, class:"form-control" %>
+        </div>
+
+        <div class="form-group">
+          <%= f.label "Téléphone" %>
+          <%= f.text_field :phone_number, class:"form-control" %>
+        </div>
+
+        <div class="form-group">
+          <%= f.submit name="Demander un devis", class:"btn-form" %>
+        </div>
+
+      <% end %>
+
+    </div>
+  </div>
+
+</div>

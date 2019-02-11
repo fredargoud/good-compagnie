@@ -3,6 +3,7 @@ class QuotationsController < ApplicationController
 
   def new
     @quotation = Quotation.new
+    @quotation.event = @event
   end
 
   def create
