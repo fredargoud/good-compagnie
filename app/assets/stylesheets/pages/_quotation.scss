@@ -17,3 +17,19 @@ h1 {
   padding: 5px;
   font-weight: 700;
 }
+
+.quotation-btn {
+  border: 1px solid #FF26AB;
+  padding: 8px;
+  position: fixed;
+  border-radius: 20px;
+  color: white;
+  right: 20px;
+  background-color: #FF26AB;
+  top: 125px;
+  opacity: 0.92;
+  &:hover {
+    color: white;
+    opacity: 1;
+  }
+}
