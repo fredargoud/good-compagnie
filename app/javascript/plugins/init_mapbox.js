@@ -40,13 +40,9 @@ const initMapbox = () => {
   if (mapElement) {
     const map = buildMap();
     const markers = JSON.parse(mapElement.dataset.markers);
+    console.log(markers);
     addMarkersToMap(map, markers);
     fitMapToMarkers(map, markers);
-    const markersPopup = document.querySelector('.mapboxgl-marker-anchor-center');
-    console.log(markersPopup);
-    markersPopup.on('click', (e) => {
-      new map.Popup({offset: popupOffsets});
-    });
   }
 };
 
