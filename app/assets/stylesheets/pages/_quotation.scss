@@ -26,8 +26,9 @@ h1 {
   color: white;
   right: 20px;
   background-color: #FF26AB;
-  top: 125px;
+  top: 475px;
   opacity: 0.92;
+  z-index: 3;
   &:hover {
     color: white;
     opacity: 1;

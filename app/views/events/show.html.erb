@@ -1,6 +1,6 @@
 <%= render "components/banner-show" %>
-
 <div class="container">
+<%= link_to "Obtenir un devis", new_event_quotation_path(@event.id), class:"quotation-btn" %>
   <div class="col-xs-12 col-sm-2">
     <%= render "shared/sidebar" %>
   </div>
