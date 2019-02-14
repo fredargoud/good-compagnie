@@ -4,12 +4,20 @@
 <!-- Slide out nav bar -->
 <ul id="sidebar">
 
-  <li href="#">Traiteurs</li>
+  <%= link_to traiteurs_events_path do %>
+    <li>Traiteurs</li>
+  <% end %>
   <hr>
-  <li href="#">Animations</li>
+  <%= link_to animations_events_path do %>
+    <li>Animations</li>
+  <% end %>
   <hr>
-  <li href="#">Team Building</li>
+  <%= link_to team_building_events_path do %>
+    <li>Team Building</li>
+  <% end %>
   <hr>
-  <li href="#">Soirée d'entreprise</li>
+  <%= link_to soiree_dentreprise_events_path do %>
+    <li>Soirée d'entreprise</li>
+  <% end %>
   <hr>
 </ul>

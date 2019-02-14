@@ -12,4 +12,20 @@ class EventsController < ApplicationController
     @event = Event.find(params[:id])
     @markers = { lng: @event.longitude, lat: @event.latitude }
   end
+
+  def traiteurs
+    @traiteurs = Event.where(category: 'traiteur')
+  end
+
+  def animations
+    @animations = Event.where(category: 'animation')
+  end
+
+  def team_building
+    @team_building = Event.where(category: 'team-building')
+  end
+
+  def soiree_dentreprise
+    @soirees = Event.where(category: "soiree d'entreprise")
+  end
 end

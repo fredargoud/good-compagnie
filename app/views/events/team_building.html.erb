@@ -1,0 +1,30 @@
+<% url = 'http://www.maisonlallemand.fr/resources/images/traiteur/slide/07-traiteur.jpg' %>
+<%= render "components/banner" %>
+
+<div class="container">
+  <div class="col-xs-12 col-sm-2">
+    <%= render "shared/sidebar" %>
+  </div>
+  <div class="col-xs-12 col-sm-10">
+    <div class="row">
+      <%  @team_building.each do |event| %>
+        <div class="col-xs-12 col-sm-4">
+          <div class="entire-card">
+            <%= link_to '', event_path(event), class: 'card-link' %>
+            <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(<%= url %>);">
+              <div class="heart-quotation">
+                <%= link_to new_event_quotation_path(event.id) do %>
+                  <i class="far fa-heart"></i>
+                <% end %>
+              </div>
+            </div>
+            <div class="card-description">
+              <h2><%= event.name %></h2>
+              <p>Very cool city, the best</p>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
