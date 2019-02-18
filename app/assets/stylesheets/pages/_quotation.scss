@@ -1,5 +1,5 @@
 .quotation-form {
-  width: 400px;
+  width: 600px;
   margin: 20px auto 40px;
 }
 
@@ -33,4 +33,13 @@ h1 {
     color: white;
     opacity: 1;
   }
+}
+
+span.flatpickr-weekday {
+  margin: 10px !important;
+  display: inline-block !important;
+}
+
+.flatpickr-month {
+  height: 31px;
 }
