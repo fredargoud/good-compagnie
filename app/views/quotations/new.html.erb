@@ -1,63 +1,100 @@
 <div class="container">
 
-  <div class="col-xs-12 col-sm-6 col-sm-offset-3">
+  <div class="col-xs-12 col-sm-6 col-sm-offset-3 container-form">
     <h1>Devis pour <br><%= @event.name %></h1>
     <div class="quotation-form">
-
       <%= form_for [@event, @quotation] do |f| %>
-        <div class="row">
-          <div class="col-xs-6">
-            <div class="form-group">
-              <%= f.label "Prénom" %>
-              <%= f.text_field :first_name, class:"form-control" %>
+        <div class="first-page active">
+
+          <div class="row">
+            <div class="col-xs-6">
+              <div class="form-group">
+                <%= f.label "Prénom" %>
+                <%= f.text_field :first_name, class:"form-control" %>
+              </div>
+            </div>
+
+            <div class="col-xs-6">
+              <%= f.label "Nom" %>
+              <%= f.text_field :last_name, class:"form-control" %>
             </div>
           </div>
 
-          <div class="col-xs-6">
-            <%= f.label "Nom" %>
-            <%= f.text_field :last_name, class:"form-control" %>
-          </div>
-        </div>
 
-
-        <div class="row">
-          <div class="col-xs-6">
-            <div class="form-group">
-              <%= f.label "Email" %>
-              <%= f.text_field :e_mail, class:"form-control" %>
+          <div class="row">
+            <div class="col-xs-6">
+              <div class="form-group">
+                <%= f.label "Email" %>
+                <%= f.text_field :e_mail, class:"form-control" %>
+              </div>
+            </div>
+            <div class="col-xs-6">
+              <div class="form-group">
+                <%= f.label "Société" %>
+                <%= f.text_field :company, class:"form-control" %>
+              </div>
             </div>
           </div>
-          <div class="col-xs-6">
-            <div class="form-group">
-              <%= f.label "Société" %>
-              <%= f.text_field :company, class:"form-control" %>
-            </div>
+
+          <div class="form-group">
+            <%= f.label "Ville" %>
+            <%= f.text_field :city, class:"form-control" %>
+          </div>
+
+          <div class="form-group">
+            <%= f.label "Adresse" %>
+            <%= f.text_field :address, class:"form-control" %>
+          </div>
+
+          <div class="form-group">
+            <%= f.label "Téléphone" %>
+            <%= f.text_field :phone_number, class:"form-control" %>
+          </div>
+          <div class="center-button">
+            <a class="button-suivant">Suivant</a>
           </div>
         </div>
 
+          <!-- -----------------------------------------------
+                    Deuxieme partie du form -->
 
-        <div class="form-group">
-          <%= f.label "Adresse" %>
-          <%= f.text_field :address, class:"form-control" %>
+        <div class="second-page">
+          <div class="form-group">
+            <%= f.label "Date" %>
+            <%= f.text_field :date, class:"form-control date", placeholder:"Sélectionner une date.." %>
+            <a class="input-button" title="toggle" data-toggle>
+              <i class="icon-calendar"></i>
+            </a>
+          </div>
+
+          <div class="form-group">
+            <%= f.label "Ville de l'évènement" %>
+            <%= f.text_field :event_city, class:"form-control" %>
+          </div>
+
+          <div class="form-group">
+            <%= f.label "Horaires" %>
+            <%= f.text_field :schedule, class:"form-control" %>
+          </div>
+
+          <div class="form-group">
+            <%= f.label "Nombre d'invités" %>
+            <%= f.text_field :number_of_guests, class:"form-control" %>
+          </div>
+
+          <div class="form-group">
+            <%= f.label "Commentaire" %>
+            <%= f.text_field :comment, class:"form-control comment" %>
+          </div>
+
+          <div class="flexbox">
+              <a class="button-precedent">Précédent</a>
+              <div class="form-group">
+                <%= f.submit name="Demander un devis", class:"btn-form" %>
+              </div>
+          </div>
+
         </div>
-
-        <div class="form-group">
-          <%= f.label "Téléphone" %>
-          <%= f.text_field :phone_number, class:"form-control" %>
-        </div>
-
-        <div class="form-group">
-          <%= f.label "Date" %>
-          <%= f.text_field :date, class:"form-control date", placeholder:"Sélectionner une date.." %>
-          <a class="input-button" title="toggle" data-toggle>
-            <i class="icon-calendar"></i>
-          </a>
-        </div>
-
-        <div class="form-group">
-          <%= f.submit name="Demander un devis", class:"btn-form" %>
-        </div>
-
       <% end %>
 
     </div>
