@@ -2,6 +2,7 @@
   background-size: cover;
   background-position: center;
   height: 120vh;
+  background-color: white;
 }
 
 .entire-form {
@@ -84,9 +85,6 @@ a.button-precedent {
   color: #236167;
   width: 200px;
   text-align: center;
-  .button-precedent:hover {
-    text-decoration: none !important;
-  }
 }
 
 a.button-suivant {
@@ -100,6 +98,12 @@ a.button-suivant {
 }
 
 .button-suivant:hover {
+  text-decoration: none !important;
+  background-color: #236167;
+  color: white;
+}
+
+.button-precedent:hover {
   text-decoration: none !important;
   background-color: #236167;
   color: white;
