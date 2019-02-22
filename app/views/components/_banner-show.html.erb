@@ -1,6 +1,8 @@
 <div class="banner-show" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('http://www.maisonlallemand.fr/resources/images/traiteur/slide/07-traiteur.jpg');">
   <div class="banner-content">
-    <h1><%= @event.category.capitalize %></h1>
+    <% if @event.category %>
+      <h1><%= @event.category.capitalize %></h1>
+    <% end %>
     <h2><%= @event.name %></h2>
   </div>
 </div>

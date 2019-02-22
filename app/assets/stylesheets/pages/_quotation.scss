@@ -1,13 +1,13 @@
-.container {
-  background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('http://www.maisonlallemand.fr/resources/images/traiteur/slide/07-traiteur.jpg');
+.container-form {
   background-size: cover;
   background-position: center;
+  height: 120vh;
 }
 
-.container-form {
+.entire-form {
   background-color: rgba(250, 250, 250, 0.7);
   border-radius: 10px;
-  margin: 35px auto;
+  margin-top: 45px;
 }
 
 .quotation-form {
@@ -96,10 +96,13 @@ a.button-suivant {
   color: #236167;
   width: 200px;
   text-align: center;
-  margin-bottom: 20px;
-  .button-suivant:hover {
-    text-decoration: none !important;
-  }
+  margin: 20px auto;
+}
+
+a:hover {
+  text-decoration: none !important;
+  background-color: #236167;
+  color: white;
 }
 
 .flatpickr-current-month {
@@ -109,4 +112,8 @@ a.button-suivant {
 .center-button {
   margin: 28px;
   width: 100%;
+}
+
+label {
+  font-weight: 70;
 }

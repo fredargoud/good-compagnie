@@ -1,6 +1,6 @@
-<div class="container">
+<div class="container-form", style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('http://www.maisonlallemand.fr/resources/images/traiteur/slide/07-traiteur.jpg")";>
 
-  <div class="col-xs-12 col-sm-6 col-sm-offset-3 container-form">
+  <div class="col-xs-12 col-sm-6 col-sm-offset-3 entire-form">
     <h1>Devis pour <br><%= @event.name %></h1>
     <div class="quotation-form">
       <%= form_for [@event, @quotation] do |f| %>
@@ -67,15 +67,20 @@
             </a>
           </div>
 
-          <div class="form-group">
-            <%= f.label "Ville de l'évènement" %>
-            <%= f.text_field :event_city, class:"form-control" %>
+          <div class="row">
+            <div class="col-xs-6">
+              <div class="form-group">
+                <%= f.label "Ville de l'évènement" %>
+                <%= f.text_field :event_city, class:"form-control" %>
+              </div>
+            </div>
+
+            <div class="col-xs-6">
+              <%= f.label "Horaires" %>
+              <%= f.text_field :schedule, class:"form-control" %>
+            </div>
           </div>
 
-          <div class="form-group">
-            <%= f.label "Horaires" %>
-            <%= f.text_field :schedule, class:"form-control" %>
-          </div>
 
           <div class="form-group">
             <%= f.label "Nombre d'invités" %>
@@ -84,7 +89,7 @@
 
           <div class="form-group">
             <%= f.label "Commentaire" %>
-            <%= f.text_field :comment, class:"form-control comment" %>
+            <%= f.text_area(:comment, :size => "65x10") %>
           </div>
 
           <div class="flexbox">
