@@ -1,7 +1,10 @@
 class EventsController < ApplicationController
+  before_action :set_event, only: :show
+
   def index
     if params[:query].present?
-      @events = Event.where("name ILIKE ?", "%#{params[:query]}%")
+      # @events = Event.where("address ILIKE ?", "%#{params[:query]}%")
+      @events = Event.near("%#{params[:query]}%", 100)
     else
       @events = Event.all
     end
@@ -9,7 +12,6 @@ class EventsController < ApplicationController
 
   def show
     # @events = Event.where.not(latitude: nil, longitude: nil)
-    @event = Event.find(params[:id])
     @markers = { lng: @event.longitude, lat: @event.latitude }
   end
 
@@ -43,7 +45,7 @@ class EventsController < ApplicationController
   private
 
   def set_event
-    @event = Event.find(params[:event_id])
+    @event = Event.find(params[:id])
   end
 
   def event_params
