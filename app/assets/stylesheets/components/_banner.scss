@@ -25,26 +25,35 @@
 
 .grid {
   display: grid;
-  grid-template-columns: 90% 10%;
+  grid-template-columns: 45% 45% 10%;
   grid-template-rows: 100%;
-
 }
 
-.form-banner {
+.form-banner.first-el {
   grid-row: 1 / span 1;
   grid-column: 1 / span 1;
-  height: 52px;
-  border-radius: 25px 0px 0px 25px;
+}
+
+.form-banner.second-el {
+  grid-row: 1 / span 1;
+  grid-column: 2 / 3;
 }
 
 .btn.btn-primary.btn-lg.el {
-  grid-row: 1 / span 1;
-  grid-column: 2 / span 1;
+  grid-row: 1;
+  grid-column: 3;
   border-radius: 0 25px 25px 0;
   background-color: #236167 !important;
   border-color: #236167;
 }
 
-.banner-content-show {
+.form-banner {
+  width: 100%;
+  height: 100%;
+  padding-left: 10px;
+  color: black;
+}
 
+#query {
+  border-radius: 25px 0 0 25px;
 }
