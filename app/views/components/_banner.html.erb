@@ -3,16 +3,30 @@
   <div class="banner-content">
     <h1>Les meilleurs prestations pour votre entreprise</h1>
 
-    <div class="grid">
-        <%= form_tag events_path, method: :get do %>
+    <%= form_tag events_path, method: :get do %>
+      <div class="grid">
+        <div class="first-el">
           <%= text_field_tag :query,
-            params[:query],
-            class: "form-control form-banner",
-            placeholder: "Trouver une prestation"
-          %>
+              params[:query],
+              class: "form-banner",
+              placeholder: "Ville?"
+            %>
+        </div>
+        <div class="second-el">
+          <select class="select2 form-banner" name="country">
+            <option value="" disabled selected>Type de prestation</option>
+            <option value="traiteurs">Traiteurs</option>
+            <option value="animations">Animations</option>
+            <option value="team_building">Team-Building</option>
+            <option value="soirees">Soirées d'entreprise</option>
+          </select>
+        </div>
+        <%= button_tag(type: "submit", class: "btn btn-primary btn-lg el") do %>
+          <i class="fas fa-search"></i>
         <% end %>
-        <a class="btn btn-primary btn-lg el"><i class="fas fa-search"></i></a>
-    </div>
+
+      </div>
+    <% end %>
 
   </div>
 </div>
