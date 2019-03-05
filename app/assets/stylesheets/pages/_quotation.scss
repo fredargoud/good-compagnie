@@ -3,10 +3,15 @@
   background-position: center;
   height: 120vh;
   background-color: white;
+  h1 {
+  text-align: center;
+  font-size: 30px;
+  margin: 35px;
+}
 }
 
 .entire-form {
-  background-color: rgba(250, 250, 250, 0.7);
+  background-color: rgba(250, 250, 250, 0.9);
   border-radius: 10px;
   margin-top: 45px;
 }
@@ -14,12 +19,6 @@
 .quotation-form {
   width: 600px;
   margin: 20px auto 40px;
-}
-
-h1 {
-  text-align: center;
-  font-size: 40px;
-  margin: 35px;
 }
 
 .btn-form {
@@ -42,7 +41,7 @@ h1 {
   color: white;
   right: 20px;
   background-color: #FF26AB;
-  top: 475px;
+  top: 390px;
   opacity: 0.92;
   z-index: 3;
   &:hover {

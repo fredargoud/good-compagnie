@@ -31,6 +31,12 @@
   font-size: 25px;
   text-transform: uppercase;
   z-index: 3;
+  .far.fa-heart {
+    color: indianred;
+    :hover {
+      color: indianred;
+    }
+  }
 }
 
 .card-description {
